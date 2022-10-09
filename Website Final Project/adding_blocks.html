@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ECG Code Club - Adding Blocks</title>
+    <link rel="stylesheet" href="css/content.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+  </head>
+  <body>
+    <nav class="default" id="top-navigation">
+      <ul>
+        <li id="home"><a href="https://artfulmumbles.github.io/Website-Final-Project/homepage.html">ECG {Code} Club</a></li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html" class="dropbtn">Getting Started</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.1">Introduction</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.2">Installing JDK</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.3">Installing Eclipse</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.4">Installing Minecraft Forge</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.5">Conclusion</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html" class="dropbtn">Java Tutorial</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.1">What is Java?</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.2">Hello World</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.3">Variables</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.4">Functions</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.5">Classes and OOP</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html" class="dropbtn">Adding Items</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.1">ExampleMod</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.2">Item Class</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.3">Item Model</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.4">Registering Items</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html" class="dropbtn">Adding Blocks</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.1">Block Class</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.2">Block Textures</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.3">Registering Blocks</a>
+          </div>
+        </li>
+        <li class = "icon" id="menu" onclick="openMenu()">
+          <img src="images/menu.png" alt="Menu" >
+        </li>
+      </ul>
+
+    </nav>
+    <div class="sidenav">
+      <a href="#1.1">Extending Block Class</a>
+      <a href="#1.2">Block Textures</a>
+      <a href="#1.3">Registering Blocks</a>
+    </div>
+    <div class="main">
+      <div class="body">
+        <div class="textbox">
+          <h1>Addings Blocks</h1>
+        </div>
+      </div>
+    <div class="body">
+      <div class="textbox">
+      <h3 id="1.1">Extending Block Class</h3>
+        <p>
+          Now that we already have an ExampleMod project opened, we can move right along to implementing a new block. Just as with items, the first step will be to extend the Block class. After we pass a material
+          type to the parent constructor, we can set a bunch more properties. For example, <code>setHardness(1.0f);</code> defines how hard the block will be to mine. Similarly, <code>setHarvestLevel("pickaxe", 0);</code>
+          defines the level of pickaxe needed to mine our block, in this case none. When your're done, your code might look something like this:
+        </p>
+        <img src="images/adding_blocks/block-class.jpg" alt="Block Class Declaration">
+        <p>
+          Unlike items, we also need to extend another class in order to have our Block show in the creative menu. Follow the same process extending the object BlockItem as we learned about in the previous tutorial
+          and an item for your block will show up.
+        </p>
+      <h3 id="1.2">Block Textures</h3>
+        <p>
+          Again, we are going to put a file called <span>my_block.json</span> into <span>src\main\resources\assets\example\models\block\</span>. The code for that will look like this:
+        </p>
+        <img src="images/adding_blocks/block-json.jpg" alt="Block JSON file">
+        <p>
+          In this case, we are using a parent of block/cube_all, which means that the texture we provide will be used on all sides of our block. We can use other default models as well such as:
+        </p>
+          <ul>
+            <li>block/cube (all faces are different)</li>
+            <li>block/cube_bottom_top (think wood block)</li>
+            <li>block/orientable (block with variable orientation like a chest)</li>
+            <li>block/cross (tall grass, mushrooms)</li>
+            <li>block/crop (wheat, potatoes)</li>
+          </ul>
+        <p>
+          Each of these parents requires specification by ID in the textues, and you can check those ids in the parent model if you don't know them. The final step will be to place a texture into
+          <span>src\main\resources\assets\example\textures\blocks\</span> that shares a name with you block. In this example, <span>decorative.png</span>.
+        </p>
+      <h3 id="1.3">Registering Blocks</h3>
+      <p>
+        As with items, the final step will be registering our blocks with Minecraft. This is very similar to items, and should be done in the ExampleMod class during pre-init. Your code for that will
+        look like this:
+      </p>
+      <img src="images/adding_blocks/registration.jpg" alt="Registration" class="img-wide">
+      <p>
+        In addition, we find another way of registering our BlockItems here. Minecraft can automatically register a BlockItem for us that shares a texture with the block when held in your hand. This
+        can be done like so:
+      </p>
+      <img src="images/adding_blocks/ItemBlock.jpg" alt="Item Block">
+      <p>
+        That's it! You now can create custom blocks and items in Minecraft.
+      </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h1>ECG {Code} Club</h1>
+      <h2><a href="mailto:ecg.codeclub@gmail.com">Contact Us</a> | <strong>@ECGCodeClub</strong> </h2>
+      <h3>05/04/2021</h3>
+    </footer>
+  </body>
+</html>

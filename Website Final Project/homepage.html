@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ECG Code Club - Homepage</title>
+    <link rel="stylesheet" href="css/master.css">
+    <script src="javascript/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+  </head>
+  <body>
+    <div class="nav_back">
+      <nav class="default" id="top-navigation">
+        <ul>
+          <li id="home"><a href="https://artfulmumbles.github.io/Website-Final-Project/homepage.html">ECG {Code} Club</a></li>
+          <li class="dropdown">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html" class="dropbtn">Getting Started</a>
+            <div class="dropdown-content">
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.1">Introduction</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.2">Installing JDK</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.3">Installing Eclipse</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.4">Installing Minecraft Forge</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.5">Conclusion</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html" class="dropbtn">Java Tutorial</a>
+            <div class="dropdown-content">
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.1">What is Java?</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.2">Hello World</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.3">Variables</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.4">Functions</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.5">Classes and OOP</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html" class="dropbtn">Adding Items</a>
+            <div class="dropdown-content">
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.1">ExampleMod</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.2">Item Class</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.3">Item Model</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.4">Registering Items</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html" class="dropbtn">Adding Blocks</a>
+            <div class="dropdown-content">
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.1">Block Class</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.2">Block Textures</a>
+              <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.3">Registering Blocks</a>
+            </div>
+          </li>
+          <li class = "icon" id="menu" onclick="openMenu()">
+            <img src="images/menu.png" alt="Menu" >
+          </li>
+        </ul>
+
+      </nav>
+    </div>
+
+    <div class="camp_reminder">
+      <p>Camp Dates are from <em>June 14th - 18th</em> and from <em>June 28th - July 2nd</em></p>
+    </div>
+    <div class="camp_reminder_grey">
+      <p><a href="https://forms.gle/gBnzNULURew1MYHw6"><span>Register</span> for Summer Camp</a> &rsaquo;</p>
+    </div>
+    <div id="top_body" class="body">
+      <h1 class="green">ECG</h1>
+      <h1 class="blue">&lt;CODE&gt;</h1>
+      <h1 class="pink">CAMP</h1>
+    </div>
+
+    <div class="body">
+      <div class="flexible">
+        <div class="flex-content">
+          <img src="images/homepage/Code_Club_Logo.png" alt="">
+        </div>
+        <div class="flex-content">
+          <div class="textbox">
+            <h2>Who are we?</h2>
+            <p>The ECG Code Club was founded in 2020 at the Early College at Guilford. Our goal is to promote STEM, specically Computer Science and Engineering, in our local community. We host competitions at school,
+               as well as camp events like this one. We believe that everyone should have access to resources to learn about programming.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="title">
+        <div class="textbox">
+          <h1 id="mtm">Meet the Mentors</h1>
+        </div>
+      </div>
+
+      <div class="borderbox">
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'Michael')" id="defaultOpen">Michael</button>
+          <button class="tablinks" onclick="openTab(event, 'Anika')">Anika</button>
+          <button class="tablinks" onclick="openTab(event, 'Lakshya')">Lakshya</button>
+          <button class="tablinks" onclick="openTab(event, 'Keval')">Keval</button>
+          <button class="tablinks" onclick="openTab(event, 'Hope')">Hope</button>
+          <button class="tablinks" onclick="openTab(event, 'Austin')">Austin</button>
+        </div>
+
+        <div id="Michael" class="tabcontent">
+          <h3>Michael</h3>
+          <img src="images/members/michael.png" alt="Img of Michael">
+          <p>Michael is the Vice President of the Code Club. He will be hosting the Intro to Java with Minecraft Modding Camp Session. He is experienced with Java and other languages and loves to learn.</p>
+        </div>
+        <div id="Anika" class="tabcontent">
+          <h3>anika</h3>
+          <img src="images/members/anika.png" alt="Img of Anika">
+          <p>アニカさんはコードクラブの会長です。頭がよくってプログラムするのが上手ですよ。ギルフォード大学の高校二年生です。</p>
+        </div>
+        <div id="Lakshya" class="tabcontent">
+          <h3>Lakshya</h3>
+          <img src="images/members/lakshya.png" alt="Img of Lakshya">
+          <p>I didn't send Michael anything to say. That's why there's only filler text here. I promise to him that I will be on time in future...</p>
+        </div>
+        <div id="Keval" class="tabcontent">
+          <h3>Keval</h3>
+          <img src="images/members/keval.png" alt="Img of Keval">
+          <p>I didn't send Michael anything to say. That's why there's only filler text here. I promise to him that I will be on time in future...</p>
+        </div>
+        <div id="Hope" class="tabcontent">
+          <h3>Hope</h3>
+          <img src="images/members/hope.png" alt="Img of Hope">
+          <p>I didn't send Michael anything to say. That's why there's only filler text here. I promise to him that I will be on time in future...</p>
+        </div>
+        <div id="Austin" class="tabcontent">
+          <h3>Austin</h3>
+          <img src="images/members/austin.png" alt="Img of Austin">
+          <p>I didn't send Michael anything to say. That's why there's only filler text here. I promise to him that I will be on time in future...</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h1>ECG {Code} Club</h1>
+      <h2><a href="mailto:ecg.codeclub@gmail.com">Contact Us</a> | <strong>@ECGCodeClub</strong> </h2>
+      <h3>05/04/2021</h3>
+    </footer>
+  </body>
+</html>

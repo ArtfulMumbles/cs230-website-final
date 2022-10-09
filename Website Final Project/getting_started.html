@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ECG Code Club - Getting Started</title>
+    <link rel="stylesheet" href="css/content.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+    <script src="javascript/main.js" defer></script>
+  </head>
+  <body>
+    <nav class="default" id="top-navigation">
+      <ul>
+        <li id="home"><a href="https://artfulmumbles.github.io/Website-Final-Project/homepage.html">ECG {Code} Club</a></li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html" class="dropbtn">Getting Started</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.1">Introduction</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.2">Installing JDK</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.3">Installing Eclipse</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.4">Installing Minecraft Forge</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.5">Conclusion</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html" class="dropbtn">Java Tutorial</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.1">What is Java?</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.2">Hello World</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.3">Variables</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.4">Functions</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.5">Classes and OOP</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html" class="dropbtn">Adding Items</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.1">ExampleMod</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.2">Item Class</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.3">Item Model</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.4">Registering Items</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html" class="dropbtn">Adding Blocks</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.1">Block Class</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.2">Block Textures</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.3">Registering Blocks</a>
+          </div>
+        </li>
+        <li class = "icon" id="menu" onclick="openMenu()">
+          <img src="images/menu.png" alt="Menu" >
+        </li>
+      </ul>
+
+    </nav>
+    <div class="sidenav">
+      <a href="#1.1">Introduction</a>
+      <a href="#1.2">Installing the JDK</a>
+      <a href="#1.3">Installing Eclipse</a>
+      <a href="#1.4">Installing Minecraft Forge</a>
+      <a href="#1.5">Conclusion</a>
+    </div>
+    <div class="main">
+      <div class="body">
+        <div class="textbox">
+          <h1>Getting Started</h1>
+        </div>
+      </div>
+    <div class="body">
+      <div class="textbox">
+      <h3 id="1.1">Introduction</h3>
+      <p>
+        Welcome to Introduction to Java with Minecraft Modding. This website will guide you through the process of creating your own mod, and serve as a place
+        where you can review what was talked about during instructional time at camp. In this section, you'll be guided through the process of installing the
+        Java Development Kit (JDK), the Integrated Development Environment (IDE) Eclipse, as well as the Minecraft modding Application Programming Interface
+        (API) Minecraft Forge. While there are other options in terms of software, these are what you will see in this tutorial. All of these will be
+        necessary to creating our mod. As we explore further, there will be other software that will be recommended to accomplish other tasks, but for now
+        this is all you will need. Let's get started!
+      </p>
+      <h3 id="1.2">Installing the JDK</h3>
+      <p>
+        If you have Minecraft installed, then it's likely you've gone through the process of installing Java. Java has three components: the Java Virtual Machine (JVM),
+        the Java Runtime Environment (JRE), and the JDK. The JRE and JDK work together to help your computer run programs that are coded in Java. They
+        are required to run programs like Minecraft. The JDK is what gives devlopers, people who code in Java, the tools they need to write programs.
+      </p>
+      <p>
+        The JDK can be downloaded from Oracle's website <a href="https://www.oracle.com/java/technologies/javase-jdk16-downloads.html">here</a>. Scroll down until you
+        find <strong>Windows Installer</strong> on Windows or <strong>macOS Installer</strong> on Mac. Proceed with the download process and follow the instructions given to you by the installation
+        wizard. It might take a couple minutes to finish depending on your connection.
+      </p>
+      <h3 id="1.3">Installing Eclipse</h3>
+      <p>
+        Now that we have installed the JDK, we can move on to installing Eclipse. IDEs are where code is written. Though you can use a standard text editor to write code,
+        IDEs have special tools that make writing code easier. They can point out your mistakes, auto-fill information, run your program, and more. One of the most common
+        and most powerful IDEs for Java is called Eclipse and it is what we will be using to make the majority of our mods.
+      </p>
+      <p>
+          The first step is to go to the Eclipse <a href="http://www.eclipse.org/downloads">website</a> and download the latest version of the Eclipse
+          installer. When prompted to select a package, choose <strong>Eclipse IDE for Java Developers</strong> as shown below.
+      </p>
+          <img src="images/getting_started/installer-instructions-01.png" alt="Eclipse IDE for Java Developers">
+    <h3 id="1.4">Intalling Minecraft Forge</h3>
+    <p>
+      As Minecraft does not have native support for modding, we can use a modding API to help us change Minecraft's original code. We'll be using Minecraft Forge. You might have heard of it if you
+      have ever downloaded or played a modpack before. Using the tools that Forge provides, we'll be able to modify the game in lots of different ways. It's important that before you start this tutorial,
+      you have the latest version of Minecraft downloaded. If your version of Minecraft does not match mine, it should be fine as long as you are using the latest version.
+    </p>
+    <p>
+      The first step is to download forge <a href="https://files.minecraftforge.net/">here</a>. I recommend downloading the installer as shown below, it will make everything a lot easier.
+    </p>
+    <img src="images/getting_started/installer-instructions-02.jpg" alt="Minecraft Forge Download Page" class="img-wide">
+    <p>
+      After clicking installer, you will be directed to a download page and will have to wait 5 seconds before downloading. <strong>DO NOT PRESS</strong> anything but the skip button shown in the
+      image below. Otherwise, you could end up downloading some malware.
+    </p>
+    <img src="images/getting_started/installer-instructions-03.jpg" alt="Click SKIP after 5 seconds have passed" class="img-wide">
+    <p>
+      Follow the instructions given by the launcher. When prompted, make sure to select <strong>Install client</strong>. You don't need to Install server for this tutorial. You are close to being finished!
+      After finishing with the install process, you should be able to open the Minecraft launcher and play the version that contains "forge" as part of the name. It might take slightly longer to load than
+      you are used to, however when you are done, your game client should appear simiar to what is shown below.
+    </p>
+    <img src="images/getting_started/installer-instructions-04.jpg" alt="Minecraft Forge Download Page">
+    <h3 id="1.5">Conclusion</h3>
+    <p>
+      Now that you have all of these tools installed, we're ready to start making Minecraft Mods! First, however, I recommend checking out the basic Java tutorial page.
+    </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h1>ECG {Code} Club</h1>
+      <h2><a href="mailto:ecg.codeclub@gmail.com">Contact Us</a> | <a href="https://www.instagram.com/ecgcodeclub/?hl=en"><strong>@ECGCodeClub</strong></a></h2>
+      <h3>05/04/2021</h3>
+    </footer>
+  </body>
+</html>

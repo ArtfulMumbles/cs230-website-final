@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ECG Code Club - Adding Items</title>
+    <link rel="stylesheet" href="css/content.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+  </head>
+  <body>
+    <nav class="default" id="top-navigation">
+      <ul>
+        <li id="home"><a href="https://artfulmumbles.github.io/Website-Final-Project/homepage.html">ECG {Code} Club</a></li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html" class="dropbtn">Getting Started</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.1">Introduction</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.2">Installing JDK</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.3">Installing Eclipse</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.4">Installing Minecraft Forge</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.5">Conclusion</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html" class="dropbtn">Java Tutorial</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.1">What is Java?</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.2">Hello World</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.3">Variables</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.4">Functions</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.5">Classes and OOP</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html" class="dropbtn">Adding Items</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.1">ExampleMod</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.2">Item Class</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.3">Item Model</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.4">Registering Items</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html" class="dropbtn">Adding Blocks</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.1">Block Class</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.2">Block Textures</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.3">Registering Blocks</a>
+          </div>
+        </li>
+        <li class = "icon" id="menu" onclick="openMenu()">
+          <img src="images/menu.png" alt="Menu" >
+        </li>
+      </ul>
+
+    </nav>
+    <div class="sidenav">
+      <a href="#1.1">ExampleMod</a>
+      <a href="#1.2">Extending Item Class</a>
+      <a href="#1.3">Adding Item Model</a>
+      <a href="#1.4">Registering Items</a>
+    </div>
+    <div class="main">
+      <div class="body">
+        <div class="textbox">
+          <h1>Adding Items</h1>
+        </div>
+      </div>
+    <div class="body">
+      <div class="textbox">
+      <h3 id="1.1">ExampleMod</h3>
+        <p>
+          If you have followed instuctions up to this point, you should already have everything you need installed. To start, import the example mod project that was
+          installed with Minecraft Forge into Eclipse. You should be able to run this file and open the ExampleMod in the Minecraft Forge client by pressing the "run"
+          button inside of Eclipse. If you have trouble with this, go back to previous steps and follow the instructions carefully.
+        </p>
+        <p>
+          If the ExampleMod does load correctly, we are ready to get started with adding custom items to the game.
+        </p>
+      <h3 id="1.2">Extending Item Class</h3>
+        <p>
+          In the CustomItem class, extend the Minecraft Item class. This class will be that of our customized item. In the constuctor, call the parent constuctor with super().
+          We can then move on to changing item specific properties. For example, <code>this.setMaxDamage(0);</code> will change the maximum amount of damage the item can do to 0.
+          Another example could be <code>this.setCreativeTab(CreativeTabs.MISC)</code> which will change the location of the object in the creative menu. There are a bunch of other
+          changes you can make, for a full list, reference the Minecraft Forge documentation. When you're done, you should have something that looks like this:
+        </p>
+        <img src="images/adding_items/item-class.jpg" alt="Item Class" class="img-wide">
+      <h3 id="1.3">Adding Item Model</h3>
+      <p>
+        In order to give the item a model (a texture), we need to create a custom JSON file for it. Create a file called my_item.json and save it to the directory <span>src\main\resources\assets\example\models\item\</span>
+         where example is the modID (in this case, ExampleMod unless otherwise changed). You can then upload a png of your item texture to <span>src\main\resources\assets\example\textures\items\</span>. The
+         inside of your .json file should look something like this:
+      </p>
+      <img src="images/adding_items/json.jpg" alt="JSON file">
+      <p>
+        After this, there is one final step before your custom item can appear in-game.
+      </p>
+      <h3 id="1.4">Registering Items</h3>
+      <p>
+        In order for Minecraft to understand that an object is in the game, it must be registered. this should be done in the ExampleMod class. <code class="multi-line">Item item = new CustomItem();<br>String registryname = "my_item";
+        <br>item.setRegistryName(registryName);<br>item.setUnlocalizedName(item.getRegistryName().toString());<br>GameRegistry.register(item); </code> In addition, we also need to tell Minecraft the location of our textures.
+        This can be done with these lines of code, also in the ExampleMod class, pre-init. <code class="multi-line">final ModelResourceLocation fullModelLocation = new ModelResourceLocation(item.getRegistryName().toString(), "inventory");<br>ModelBakery.registerItemVariants(item, fullModelLocation);<br>ModelLoader.setCustomMeshDefinition(item, new ItemMeshDefinition() {<br>public ModelResourceLocation getModelLocation(ItemStack stack)<br> {<br>return fullModelLocation;<br>}<br>}); </code>
+      </p>
+      <p>
+        If you followed all of these steps correctly, you should be able to see a custom item in the game with the texture and name you assigned to it.
+      </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h1>ECG {Code} Club</h1>
+      <h2><a href="mailto:ecg.codeclub@gmail.com">Contact Us</a> | <strong>@ECGCodeClub</strong> </h2>
+      <h3>05/04/2021</h3>
+    </footer>
+  </body>
+</html>

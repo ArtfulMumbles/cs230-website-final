@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ECG Code Club - Basic Java Tutorial</title>
+    <link rel="stylesheet" href="css/content.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+  </head>
+  <body>
+    <nav class="default" id="top-navigation">
+      <ul>
+        <li id="home"><a href="https://artfulmumbles.github.io/Website-Final-Project/homepage.html">ECG {Code} Club</a></li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html" class="dropbtn">Getting Started</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.1">Introduction</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.2">Installing JDK</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.3">Installing Eclipse</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.4">Installing Minecraft Forge</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/getting_started.html#1.5">Conclusion</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html" class="dropbtn">Java Tutorial</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.1">What is Java?</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.2">Hello World</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.3">Variables</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.4">Functions</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/java_tutorial.html#1.5">Classes and OOP</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html" class="dropbtn">Adding Items</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.1">ExampleMod</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.2">Item Class</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.3">Item Model</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_items.html#1.4">Registering Items</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html" class="dropbtn">Adding Blocks</a>
+          <div class="dropdown-content">
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.1">Block Class</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.2">Block Textures</a>
+            <a href="https://artfulmumbles.github.io/Website-Final-Project/adding_blocks.html#1.3">Registering Blocks</a>
+          </div>
+        </li>
+        <li class = "icon" id="menu" onclick="openMenu()">
+          <img src="images/menu.png" alt="Menu" >
+        </li>
+      </ul>
+
+    </nav>
+    <div class="sidenav">
+      <a href="#1.1">What is Java?</a>
+      <a href="#1.2">Hello World Program</a>
+      <a href="#1.3">Variables</a>
+      <a href="#1.4">Functions and Methods</a>
+      <a href="#1.5">Classes and Introduction to OOP</a>
+    </div>
+    <div class="main">
+      <div class="body">
+        <div class="textbox">
+          <h1>Basic Java Tutorial</h1>
+        </div>
+      </div>
+    <div class="body">
+      <div class="textbox">
+      <h3 id="1.1">What is Java?</h3>
+        <p>
+          Java is a class-based, object-oriented programming language and is what Minecraft was programmed in. In order to modify the game, we need to write code in Java that can communicate
+          Minecraft's base code. One nice feature of Java is that it is extremely modular. OOP (Object Oriented Programming) involves creating a single model to use for multiple similar
+          aspects of a program. For example, every item in Minecraft is of the <em><strong>Item</strong></em> class. We can create new <em><strong>instances</strong></em> of this class to
+          make new items, and can <em><strong>extend</strong></em>
+          this classes functionality in order to give a custom item special properties. For now, we will start by writing a "Hello World" program in Java. This will show the basics of
+          Java.
+        </p>
+        <h3 id="1.2">Java "Hello World" Program</h3>
+        <p>
+          The first step to writing a "Hello World" program is to open our IDE, Eclipse. Upon launching, you should be prompted to select a <strong>workspace</strong>. This is simply where
+          all of your project files will be stored on your computer. I recommend creating a new folder on your desktop for this purpose.
+        </p>
+        <img src="images/java_tutorial/workspace-selection.jpg" alt="Select a Workspace">
+        <p>
+          After you generate a new workspace, you should be greeted by the Eclipse welcome screen. For now, lets ignore this and proceed by heading to the <strong>file</strong> navigation
+          option at the top left of the screen and navigating to <strong>New > Java Project</strong>.
+        </p>
+        <img src="images/java_tutorial/create-project.png" alt="Create Project">
+        <p>
+          You will be prompted to name your project. Use the settings shown here, however do not wory if your excecution environment is different. Ideally, you would be using JavaSE-16 as
+          that is the most recent release as of writing this.
+        </p>
+        <img src="images/java_tutorial/create-project-02.jpg" alt="Create Project 2">
+        <p>
+          If you are asked about creating a module info file, ignore it. This is not important for this simple application. Now that we have created our project, you should be able to see a
+          new project file with the title you selected that contains the <strong>JRE System Library</strong> and a folder called <strong>src</strong>. The system library is where all of Java's
+          tools are stored. We can import these tools later in order to make full use of them. We now have to create a <strong>class</strong> file that will contain our main method. Java will
+          execute all code in the main method after we run our program. This becomes important when we start seperating our code into multiple different files as part of <strong>OOP</strong>.
+          To create a class file, <em>right</em> click on the <strong>src</strong> folder and navigate to <strong>New > Class</strong>. Name the class "main" and be sure to check the box to
+          create a <em>"public static void main(String[] args)"</em> method stub.
+        </p>
+        <img src="images/java_tutorial/create-class.png" alt="">
+        <p>
+          We can now move on to writing our "Hello World" program. Inside our newly created <strong>main.java</strong> file, we see two declarations that Eclipse has auto-generated. The first
+          declares this file as a public class by the name of main. This basically is just defining the name of the file and saying that it can be accessed by any other file in our program. The
+          second is the method stub that we created earlier. Notice how curly braces are used to encompass the code that a certain class or function contains. Anything inside the curly braces
+          of the main method is what will run when we start our program. To print "Hello World" to the console, we need to type in the following line of code below our main method.
+        </p>
+        <img src="images/java_tutorial/hello-world.jpg" alt="Hello World">
+        <p>
+          After running the program using the green arrow in the top of Ecipse, we can see that we have used the print function of System to write to the console.
+        </p>
+        <h3 id="1.3">Variables in Java</h3>
+        <p>
+          There are lots of different variable types in Java. In order to define a variable, you must define its type, its name, and its value. See the example below for defining an Integer
+          called "score" with an initial value of 5.
+        </p>
+        <img src="images/java_tutorial/score.jpg" alt="Score">
+        <p>
+          Below, you can find a full list of all primitive variable types in Java and their declarations. These are defined in much the same way as the example shown above. Each can store a
+          specific type of data and are each useful in specific circumstances.
+        </p>
+        <img src="images/java_tutorial/variables.jpg" alt="Variables" class="img-wide">
+        <p>
+          There also exist non-primite data types like Strings, Arrays, and Classes which we will not get into on this page.
+        </p>
+    <h3 id="1.4">Functions and Methods</h3>
+      <p>
+        Functions are very similar to cooking recipies. They take in a set of ingredients, an input, and modify those ingredients to get a specific output. They can be used over and over
+        again to achieve a specific result several times. For example, we might have a function that prints our "hello world" message to the console. This way, we don't have to worry about
+        writing the same line of code multiple times. An example of a function that does this is shown below.
+      </p>
+      <img src="images/java_tutorial/functions.jpg" alt="Function outputs Hello World!">
+      <p>
+        As you can see, this function takes an input (in this case a String which we refer to as s) and uses System to print it to the console. Notice the keywords in front of our function
+        declaration. As with the main method, we use public, static, and void. This is because we want everyone to be able to access it, we don't want it to change, and we don't want it to
+        return a specific value. More on functions that return objects or variables in a later tutorial.
+      </p>
+    <h3 id="1.5">Classes and Introduction to OOP</h3>
+      <p>
+        Finally, we are going to take a quick peak into classes. In order to keep this section short, I have intentionally cut off the majority of information about classes. This is to keep
+        information limited to what we will use in these tutorials. If you want more information, I recommend searching online for tutorials in this or any of the other subjects that we have
+        talked about up until this point.
+      </p>
+      <p>
+        Classes are one of the most important aspects of creating our Minecraft mod and being able to manipulate them will be vital to our modding experience. We can create a new class by making
+        the following declaration.
+      </p>
+      <img src="images/java_tutorial/class.jpg" alt="Class Declaration" class="img-wide">
+      <p>
+        In this case, we have created a class that contains a String variable called <strong>message</strong> and has a method called <strong>print</strong> that will print that string.
+        Notice that there is a method here that shares the class name. This is called a constuctor. They define what information we need to give the program in order to instatiate a
+        new instance of our class. In this case, we tell the computer that in order to make this class, we must provide a String. In addition, the constuctor sets the message String of
+        <strong>THIS</strong> specific object to the String we passed into the constuctor. The "this" keywork is important because it indicates we want to affect only one instance of the
+        object and not <em>every</em> <strong>printer</strong> object. Now, lets use our object in our main method.
+      </p>
+      <img src="images/java_tutorial/class-02.jpg" alt="Class Declaration" class="img-wide">
+      <p>
+        As you can see, we defined a new static Printer object called "helloWorld" and passed the string "Hello World!" into the constuctor. Then when we called the string method of the helloWorld
+        object, we printed the message that we passed into the constuctor. Its okay if this is a little bit confusing, it will make more sense as we start to progress into the world of modding!
+      </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h1>ECG {Code} Club</h1>
+      <h2><a href="mailto:ecg.codeclub@gmail.com">Contact Us</a> | <strong>@ECGCodeClub</strong> </h2>
+      <h3>05/04/2021</h3>
+    </footer>
+  </body>
+</html>
